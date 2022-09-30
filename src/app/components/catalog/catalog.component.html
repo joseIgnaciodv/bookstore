@@ -1,1 +1,43 @@
-<p>catalog works!</p>
+<div class="main">
+    <div class="space"></div>
+    <div class="botton_cont">
+        <div class="search_bar">
+            <div class="search_img_cont">
+                <img src="assets/images/search.png" alt="">
+            </div>
+            <div class="white_space"></div>
+            <input (keyup)="checkText()" type="text" name="" id="" placeholder="Type title, author, genre, editor, publisher..." [(ngModel)]="query">
+            <div class="cancel_search">
+                <img (click)="emptyText()" *ngIf="!empty" src="assets/images/cancel.png" alt="">
+            </div>
+        </div>
+
+        <div>
+            <button class="button_action">
+                <img src="assets/images/grid.png" alt="">
+            </button>
+
+            <button class="button_action">
+                <img src="assets/images/list.png" alt="">
+            </button>
+        </div>
+
+        <div class="action_cont">
+            <button class="button_filter">
+                <img src="assets/images/filter.png" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="book_card">
+        <div class="book_img">
+    
+        </div>
+    
+        <div class="book_title">
+    
+        </div>
+    
+    
+    </div>
+</div>
