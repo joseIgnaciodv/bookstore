@@ -1,12 +1,39 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .nav_title{
         font-family: "Lato";
-        font-weight: 600;
+        font-weight: 700;
         size: 16px;
-    } 
+    }
+
+    .logo_cont{
+        margin: auto 0 auto 5%;
+        width: 140px;
+    }
+    
+    .logo_cont img{
+        width: 100%;
+    }
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
+
+    #button_theme{
+        height: 40px;
+        background: none;
+        border: none;
+    }
+
+    #button_theme:hover{
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: lightgray;
+    }
+
+    #button_theme img{
+        width: 16px;
+        height: 16px;
+    }
+
     .header{
         width: 100%;
         height: 120px;
@@ -25,19 +52,39 @@
     }
     
     .nav_item{
-        width: 15vw;
+        width: 13vw;
         margin: auto 2%;
         display: flex;
     }
+
+    .nav_item:hover{
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: lightgray;
+    }
     
     .img_cont_nav{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 12px;
         margin: auto 5%;
         background-color: royalblue;
+    }
+
+    .img_cont_nav img{
+        margin: auto;
     }
     
     .nav_title{
         font-family: "Lato";
         font-weight: 600;
         size: 20px;
+    }
+
+    .theme_cont{
+        display: flex;
+        margin: auto 1.25%;
     }
  }
