@@ -7,7 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogComponent implements OnInit {
 
+  query: string = ""
+  empty: boolean = true
+
   constructor() { }
+
+  checkText(){
+    if (this.query == ""){
+      this.empty = true
+    }else{
+      this.empty = false
+    }
+  }
+
+  emptyText(){
+    this.query = ""
+    this.empty = true
+  }
 
   ngOnInit(): void {
   }
