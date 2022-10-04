@@ -1,35 +1,42 @@
-<div *ngIf="burger_menu" class="side_nav">
+<div *ngIf="burger_menu" [ngClass]="{'side_nav': burger_menu, 'closed_sidenav': !burger_menu}">
     <div class="close_container">
         <svg (click)="closeSideNav()" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>        
     </div>
 
-    <div class="nav_item">
-        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
-            <img src="assets/images/catalog.svg" alt="">
+    <div class="nav_items_container">
+        <div class="nav_item_side_bar">
+            <div class="img_container_sidenav">
+                <img src="assets/images/catalog.svg" alt="">
+            </div>
+            <p class="side_nav_title">Catalogue</p>
         </div>
-        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Catalogue</p>
-    </div>
-
-    <div class="nav_item">
-        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
-            <img src="assets/images/discounts.svg" alt="">
+    
+        <div class="nav_item_side_bar">
+            <div class="img_container_sidenav">
+                <img src="assets/images/discounts.svg" alt="">
+            </div>
+            <p class="side_nav_title">Discounts</p>
         </div>
-        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Discounts</p>
-    </div>
-
-    <div class="nav_item">
-        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
-            <img src="assets/images/favorites.svg" alt="">
+    
+        <div class="nav_item_side_bar">
+            <div class="img_container_sidenav">
+                <img src="assets/images/favorites.svg" alt="">
+            </div>
+            <p class="side_nav_title">Best Sellers</p>
         </div>
-        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Best Sellers</p>
     </div>
 </div>
 
 <div [ngClass]="{'header': !dark_theme, 'header-dark': dark_theme}">
     <div class="logo_cont">
-        <img src="assets/images/logotype.png" alt="">
+        <div class="circle">
+            <svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5.06301C12.5274 2.84505 9.3216 1.62043 6 1.62501C4.422 1.62501 2.907 1.89501 1.5 2.39301V23.768C2.94543 23.258 4.46725 22.9983 6 23C9.4575 23 12.612 24.3005 15 26.438M15 5.06301C17.4725 2.84493 20.6784 1.62029 24 1.62501C25.578 1.62501 27.093 1.89501 28.5 2.39301V23.768C27.0546 23.258 25.5328 22.9983 24 23C20.6784 22.9954 17.4726 24.2201 15 26.438M15 5.06301V26.438" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </div>
+        <p [ngClass]="{'logo_title': !dark_theme, 'logo_title-dark': dark_theme}">Bookshop</p>
     </div>
 
     <div class="nav_item">
@@ -61,8 +68,8 @@
     </div>
 
     <div class="menu_img_container">
-        <svg [ngClass]="{'burger_clicked': burger_menu, 'burger_not_clicked': !burger_menu}" (click)="openSideNav()" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg [ngClass]="{'burger_light': !dark_theme, 'burger_dark': dark_theme}" (click)="openSideNav()" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
             
     </div>

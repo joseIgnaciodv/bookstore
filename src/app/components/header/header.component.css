@@ -27,12 +27,17 @@
 }
 
 .logo_cont {
-  margin: auto 0 auto 5%;
-  width: 170px;
+    justify-content: space-between;
+    display: flex;
+    margin: auto 0 auto 5%;
+    width: 170px;
 }
 
-.logo_cont img {
-  width: 100%;
+.logo_title{
+    font-size: 26px;
+    font-family: "EB Garamond";
+    color: #2B3E59;
+    font-weight: 800;
 }
 
 .nav_item {
@@ -79,14 +84,20 @@
 }
 
 .side_nav{
-    transition: 1.25s ease-out;
+    display: block;
+    border: 1.25px solid #1976d2;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
-    width: 300px;
+    width: 326px;
     height: 100%;
-    background-color: #1976d2;
+    background-color: white;
+}
+
+.closed_sidenav{
+    transition: all 0.3s ease;
+    opacity: 0.6;
 }
 
 .close_container{
@@ -94,6 +105,28 @@
     right: 0;
     top: 0;
     margin: 28px 31px 0 0;
+}
+
+.nav_items_container{
+    display: block;
+    margin-top: 60px;
+}
+
+.burger_light{
+    stroke: black;
+}
+
+.circle{
+    margin: auto;
+    display: flex;
+    width: 58px;
+    height: 58px;
+    border-radius: 58px;
+    background-color: #D3BB3D;
+}
+
+.circle svg{
+    margin: auto;
 }
 
 
@@ -147,19 +180,41 @@
     height: 16px;
   }
 
-  .burger_clicked{
-    fill: #1976d2;
-  }
+  .burger_dark{
+    stroke: white;
+}
 
-  .burger_not_clicked{
-    fill: none;
-  }
+.logo_title-dark{
+    font-size: 26px;
+    font-family: "EB Garamond";
+    color: white;
+    font-weight: 800;
+}
+
 
 /*----------------------------------------- Mobile Design --------------------------------------------------- */
 
   @media only screen and (max-width: 600px) {
     .header{
         display: flex;
+    }
+
+    .button_theme{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button_theme img{
+        margin: auto;
+    }
+
+    .button_theme-dark{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button_theme-dark img{
+        margin: auto;
     }
 
     .menu_img_container{
@@ -174,4 +229,34 @@
         margin: auto 10px auto 95px;
     }
 
+    .nav_item_side_bar{
+        display: flex;
+        margin: 10px 20px;
+    }
+
+    .nav_item_side_bar:hover{
+        border-radius: 10px;
+        background-color: lightgray;
+        transition: 0.3s;
+    
+    }
+
+    .img_container_sidenav{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 7px;
+        margin: auto 5%;
+        background-color: royalblue;
+    }
+
+    .img_container_sidenav img{
+        margin: auto;
+    }
+
+    .side_nav_title{
+        font-family: "Lato";
+        font-weight: 600;
+        font-size: 16px;
+    }
   }
