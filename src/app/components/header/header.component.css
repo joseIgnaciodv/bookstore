@@ -1,90 +1,177 @@
-@media only screen and (max-width: 768px) {
-    .nav_title{
-        font-family: "Lato";
-        font-weight: 700;
-        size: 16px;
-    }
 
-    .logo_cont{
-        margin: auto 0 auto 5%;
-        width: 140px;
-    }
-    
-    .logo_cont img{
-        width: 100%;
-    }
+
+.button_theme {
+  height: 40px;
+  background: none;
+  border: none;
+  font-weight: 500;
 }
 
-@media (min-width: 992px) {
+.button_theme:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: lightgray;
+}
 
-    #button_theme{
-        height: 40px;
-        background: none;
-        border: none;
-    }
+.button_theme img {
+  width: 16px;
+  height: 16px;
+}
 
-    #button_theme:hover{
-        cursor: pointer;
-        border-radius: 10px;
-        background-color: lightgray;
-    }
+.header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+}
 
-    #button_theme img{
-        width: 16px;
-        height: 16px;
-    }
+.logo_cont {
+  margin: auto 0 auto 5%;
+  width: 170px;
+}
 
+.logo_cont img {
+  width: 100%;
+}
+
+.nav_item {
+  width: 133px;
+  margin: auto 2%;
+  display: flex;
+}
+
+.nav_item:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.img_cont_nav {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  margin: auto 5%;
+  background-color: royalblue;
+}
+
+.img_cont_nav img {
+  margin: auto;
+}
+
+.nav_title {
+  font-family: "Lato";
+  font-weight: 600;
+  size: 20px;
+}
+
+.theme_cont {
+  display: flex;
+  margin: auto 1.25%;
+}
+
+.menu_img_container{
+    transition: 1.25s ease-out;
+    visibility: hidden;
+    margin: auto 15px auto 4px;
+}
+
+.side_nav{
+    transition: 1.25s ease-out;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    background-color: #1976d2;
+}
+
+.close_container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 28px 31px 0 0;
+}
+
+
+/*----------------------------------------- Dark Theme --------------------------------------------------- */
+
+.header-dark {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #1976d2;
+  }
+
+  .img_cont_nav-dark {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    margin: auto 5%;
+    background-color: #EFB57B;
+  }
+
+  .img_cont_nav-dark img {
+    margin: auto;
+  }
+
+  .nav_title-dark {
+    font-family: "Lato";
+    font-weight: 600;
+    size: 20px;
+    color: white;
+  }
+
+  .button_theme-dark {
+    height: 40px;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .button_theme-dark:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: lightgray;
+  }
+  
+  .button_theme-dark img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .burger_clicked{
+    fill: #1976d2;
+  }
+
+  .burger_not_clicked{
+    fill: none;
+  }
+
+/*----------------------------------------- Mobile Design --------------------------------------------------- */
+
+  @media only screen and (max-width: 600px) {
     .header{
-        width: 100%;
-        height: 120px;
         display: flex;
-        justify-content: space-between;
-        position: sticky;
     }
-    
-    .logo_cont{
-        margin: auto 0 auto 5%;
-        width: 170px;
+
+    .menu_img_container{
+        visibility: visible;
     }
-    
-    .logo_cont img{
-        width: 100%;
-    }
-    
+
     .nav_item{
-        width: 13vw;
-        margin: auto 2%;
-        display: flex;
-    }
-
-    .nav_item:hover{
-        transition: 0.3s;
-        cursor: pointer;
-        border-radius: 10px;
-        background-color: lightgray;
-    }
-    
-    .img_cont_nav{
-        display: flex;
-        width: 30px;
-        height: 30px;
-        border-radius: 12px;
-        margin: auto 5%;
-        background-color: royalblue;
-    }
-
-    .img_cont_nav img{
-        margin: auto;
-    }
-    
-    .nav_title{
-        font-family: "Lato";
-        font-weight: 600;
-        size: 20px;
+        display: none;
     }
 
     .theme_cont{
-        display: flex;
-        margin: auto 1.25%;
+        margin: auto 10px auto 95px;
     }
- }
+
+  }
