@@ -1,125 +1,69 @@
 <div *ngIf="burger_menu" class="side_nav">
-  <div class="close_container">
-    <svg
-      (click)="closeSideNav()"
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1 13L13 1M1 1L13 13"
-        stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
-
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/catalog.svg" alt="" />
+    <div class="close_container">
+        <svg (click)="closeSideNav()" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L13 1M1 1L13 13" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>        
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Catalogue
-    </p>
-  </div>
 
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/discounts.svg" alt="" />
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/catalog.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Catalogue</p>
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Discounts
-    </p>
-  </div>
 
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/favorites.svg" alt="" />
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/discounts.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Discounts</p>
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Best Sellers
-    </p>
-  </div>
+
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/favorites.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Best Sellers</p>
+    </div>
 </div>
 
-<div [ngClass]="{ header: !dark_theme, 'header-dark': dark_theme }">
-  <div class="logo_cont">
-    <img src="assets/images/logotype.png" alt="" />
-  </div>
-
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/catalog.svg" alt="" />
+<div [ngClass]="{'header': !dark_theme, 'header-dark': dark_theme}">
+    <div class="logo_cont">
+        <img src="assets/images/logotype.png" alt="">
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Catalogue
-    </p>
-  </div>
 
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/discounts.svg" alt="" />
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/catalog.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Catalogue</p>
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Discounts
-    </p>
-  </div>
 
-  <div class="nav_item">
-    <div
-      [ngClass]="{ img_cont_nav: !dark_theme, 'img_cont_nav-dark': dark_theme }"
-    >
-      <img src="assets/images/favorites.svg" alt="" />
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/discounts.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Discounts</p>
     </div>
-    <p [ngClass]="{ nav_title: !dark_theme, 'nav_title-dark': dark_theme }">
-      Best Sellers
-    </p>
-  </div>
 
-  <div class="theme_cont">
-    <button
-      (click)="changeTheme()"
-      [ngClass]="{ button_theme: !dark_theme, 'button_theme-dark': dark_theme }"
-    >
-      <img src="assets/images/{{ img_url }}" alt="" />
-      {{ theme }}
-    </button>
-  </div>
+    <div class="nav_item">
+        <div [ngClass]="{'img_cont_nav': !dark_theme, 'img_cont_nav-dark': dark_theme}">
+            <img src="assets/images/favorites.svg" alt="">
+        </div>
+        <p [ngClass]="{'nav_title': !dark_theme, 'nav_title-dark': dark_theme}">Best Sellers</p>
+    </div>
+    
+    <div class="theme_cont">
+        <button (click)="changeTheme()" [ngClass]="{'button_theme': !dark_theme, 'button_theme-dark': dark_theme}">
+            <img src="assets/images/{{img_url}}" alt="">
+            {{theme}}
+        </button>
+    </div>
 
-  <div class="menu_img_container">
-    <svg
-      [ngClass]="{
-        burger_clicked: burger_menu,
-        burger_not_clicked: !burger_menu
-      }"
-      (click)="openSideNav()"
-      width="18"
-      height="12"
-      viewBox="0 0 18 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25"
-        stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
+    <div class="menu_img_container">
+        <svg [ngClass]="{'burger_clicked': burger_menu, 'burger_not_clicked': !burger_menu}" (click)="openSideNav()" width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.75 0.75H17.25M0.75 6H17.25M0.75 11.25H17.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+            
+    </div>
 </div>
