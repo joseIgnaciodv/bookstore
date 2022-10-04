@@ -50,7 +50,8 @@ export class CatalogComponent implements OnInit {
   ngOnInit(): void {
     this.loading = true
     this.api.getBooks().subscribe(res =>{
-      this.book_list = res.results.books
+      let rand = Math.floor(Math.random() * res.results.lists.length)
+      this.book_list = res.results.lists[rand].books
       this.loading = false
     })
 
