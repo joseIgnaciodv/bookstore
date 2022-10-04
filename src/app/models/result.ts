@@ -1,6 +1,6 @@
-import { Book } from "./book";
+import { List } from "./list";
 
 
 export interface Result {
-    books: Book[]
+    lists: List[]
 }
