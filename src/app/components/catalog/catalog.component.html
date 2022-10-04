@@ -1,5 +1,5 @@
-<div class="main">
-    <div class="space"></div>
+<div [ngClass]="{'main': !dark_theme, 'main-dark': dark_theme}">
+    <div [ngClass]="{'space': !dark_theme, 'space-dark': dark_theme}"></div>
     <div class="botton_cont">
         <div class="search_bar">
             <div class="search_img_cont">
@@ -12,32 +12,42 @@
             </div>
         </div>
 
-        <div>
-            <button class="button_action">
+        <div class="button_container">
+            <button (click)="setGridView()" class="button_action">
                 <img src="assets/images/grid.png" alt="">
             </button>
 
-            <button class="button_action">
+            <button (click)="setListView()" class="button_action">
                 <img src="assets/images/list.png" alt="">
             </button>
-        </div>
 
-        <div class="action_cont">
             <button class="button_filter">
                 <img src="assets/images/filter.png" alt="">
             </button>
         </div>
     </div>
 
-    <div class="book_card">
-        <div class="book_img">
+    <div class="grid_container">
+        <div [ngClass]="{'grid': grid_layout, 'list': !grid_layout}">
+            <div *ngFor="let book of book_list" [ngClass]="{'book_card': !dark_theme, 'book_card-dark': dark_theme}">
+                <div class="book_img">
+                    <img src="{{book.book_image}}" alt="">
+                </div>
+        
+                <div class="book_info">
+                    <div class="book_title">
+                        <p class="title_text">{{book.title}}</p>
+                    </div>
+        
+                    <div class="book_description">
+                        <p class="description_text">
+                            {{book.description}}
+                        </p>
+                    </div>
+                </div>
+        
+            </div>
     
         </div>
-    
-        <div class="book_title">
-    
-        </div>
-    
-    
     </div>
 </div>
