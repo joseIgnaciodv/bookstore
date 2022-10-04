@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
+import { Book } from 'src/app/models/book';
+import { BookstoreApiService } from 'src/app/services/bookstore-api.service';
+
 
 @Component({
   selector: 'app-catalog',
@@ -9,8 +13,17 @@ export class CatalogComponent implements OnInit {
 
   query: string = ""
   empty: boolean = true
+  grid_layout: boolean = true
+  dark_theme: boolean = false
+  book_list: Book[] = []
 
-  constructor() { }
+  constructor(public app: AppComponent, public api: BookstoreApiService) { 
+  }
+
+  @HostListener("document:click")
+  clicked(){
+    this.dark_theme = this.app.dark_theme
+  }
 
   checkText(){
     if (this.query == ""){
@@ -25,7 +38,19 @@ export class CatalogComponent implements OnInit {
     this.empty = true
   }
 
+  setGridView(){
+    this.grid_layout = true
+  }
+
+  setListView(){
+    this.grid_layout = false
+  }
+
   ngOnInit(): void {
+    this.api.getBooks().subscribe(res =>{
+      this.book_list = res.results.books
+    })
+
   }
 
 }
