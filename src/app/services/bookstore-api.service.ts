@@ -11,6 +11,6 @@ export class BookstoreApiService {
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Response>{
-    return this.http.get<Response>('https://api.nytimes.com/svc/books/v3/lists/hardcover-fiction.json?api-key=D0SuP4SIKsIXWBJTSPEPusicJBC7eaKC')
+    return this.http.get<Response>('https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=D0SuP4SIKsIXWBJTSPEPusicJBC7eaKC')
   }
 }
