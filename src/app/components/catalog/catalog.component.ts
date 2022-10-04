@@ -16,6 +16,7 @@ export class CatalogComponent implements OnInit {
   grid_layout: boolean = true
   dark_theme: boolean = false
   book_list: Book[] = []
+  loading: boolean = true
 
   constructor(public app: AppComponent, public api: BookstoreApiService) { 
   }
@@ -47,8 +48,10 @@ export class CatalogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.loading = true
     this.api.getBooks().subscribe(res =>{
       this.book_list = res.results.books
+      this.loading = false
     })
 
   }
