@@ -16,6 +16,7 @@ export class CatalogComponent implements OnInit {
   grid_layout: boolean = true
   dark_theme: boolean = false
   book_list: Book[] = []
+  data: Book[] = []
   loading: boolean = true
 
   constructor(public app: AppComponent, public api: BookstoreApiService) { 
@@ -37,6 +38,7 @@ export class CatalogComponent implements OnInit {
   emptyText(){
     this.query = ""
     this.empty = true
+    this.book_list = this.data
   }
 
   setGridView(){
@@ -47,11 +49,18 @@ export class CatalogComponent implements OnInit {
     this.grid_layout = false
   }
 
+  search(){
+    this.book_list = this.data.filter(book => {
+      return book.title.includes(this.query.toUpperCase())
+    })
+  }
+
   ngOnInit(): void {
     this.loading = true
     this.api.getBooks().subscribe(res =>{
       let rand = Math.floor(Math.random() * res.results.lists.length)
-      this.book_list = res.results.lists[rand].books
+      this.data = res.results.lists[rand].books
+      this.book_list = this.data
       this.loading = false
     })
 
