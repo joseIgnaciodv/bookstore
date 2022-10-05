@@ -1,6 +1,6 @@
 .main{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background: radial-gradient(100% 197.75% at 100% 0%, #CEFAE5 0%, #E6FC9D 100%);
 }
 
@@ -111,6 +111,7 @@
 }
 
 .book_card{
+    border: 1.25px solid #303030;
     /* margin: 0 auto; */
     width: 364px;
     height: 220px;
@@ -121,7 +122,7 @@
 
 .book_card:hover{
     transition: 0.2s ease-in-out;
-    transform: translate(5px, -10px);
+    transform: translate(5px, -20px);
     box-shadow: 8px 5px 5px #5A5A5A;
     cursor: pointer;
 }
@@ -136,6 +137,7 @@
     border-radius: 10px 0 0 10px;
     width: 100%;
     height: 100%;
+    border-right: 1.25px solid #303030;
 }
 
 .book_info{
@@ -178,7 +180,7 @@
 
 .grid{
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 10px 25px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 364px);
     grid-auto-rows: minmax(100px, auto);
@@ -188,11 +190,33 @@
 
 .list{
     display: block;
-    margin: 10px 0;
+    margin: 0 auto 10px auto;
 }
 
 .list .book_card{
-    margin: 10px 0;
+    width: 80vw;
+    height: 300px;
+    margin: 30px 0;
+}
+
+.list .book_title{
+    width: max-content;
+}
+
+.list .book_img{
+    width: 25%;
+    height: 100%;
+}
+
+.list .book_img img{
+    width: 100%;
+    height: 100%;
+    border-right: 1.25px solid #303030;
+}
+
+.list .book_info{
+    width: 60%;
+    margin: 5px auto 5px auto;
 }
 
 .spinner_container{
@@ -252,7 +276,7 @@
 
 .main-dark{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: #303030;
 }
 
@@ -263,6 +287,7 @@
 }
 
 .book_card-dark{
+    border: 1.25px solid;
     width: 364px;
     height: 220px;
     border-radius: 10px;
@@ -272,9 +297,34 @@
 
 .book_card-dark:hover{
     transition: 0.2s ease-in-out;
-    transform: translate(5px, -10px);
+    transform: translate(5px, -20px);
     box-shadow: none;
     cursor: pointer;
+}
+
+.list-dark{
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.list-dark .book_card-dark{
+    width: 80vw;
+    height: 300px;
+    margin: 30px 0;
+}
+
+.list-dark .book_title{
+    width: max-content;
+}
+
+.list-dark .book_img{
+    width: 25%;
+    height: 100%;
+}
+
+.list-dark .book_img img{
+    width: 100%;
+    height: 100%;
 }
 
 
