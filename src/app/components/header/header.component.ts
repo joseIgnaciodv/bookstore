@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { TitleStrategy } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';

@@ -51,7 +51,7 @@ export class CatalogComponent implements OnInit {
 
   search(){
     this.book_list = this.data.filter(book => {
-      return book.title.includes(this.query.toUpperCase())
+      return book.title.includes(this.query.toUpperCase()) || book.author.includes(this.query) || book.publisher.includes(this.query)
     })
   }
 
